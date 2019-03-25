@@ -1,0 +1,13 @@
+https://nodejs.org/en/
+https://expressjs.com/
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+
+Criar o arquivo Docker file com o conteudo abaixo:
+
+npm init
+npm install express --save
+
+docker build -t mtech-node .
+docker run --name mtech-node -d mtech-node
+docker run --name mtech-node -d -p 80:8080 mtech-node
+

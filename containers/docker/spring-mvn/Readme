@@ -1,0 +1,8 @@
+https://spring.io/guides/gs/spring-boot-docker/
+https://spring.io/guides/topicals/spring-boot-docker
+
+Criar o arquivo Docker file com o conteudo abaixo:
+
+docker build -t mtech-spring .
+docker run --name mtech-spring -d mtech-spring
+docker run --name mtech-spring -d -p 80:8080 mtech-spring

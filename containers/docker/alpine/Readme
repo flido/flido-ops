@@ -1,0 +1,25 @@
+docker run alpine -it
+docker run -it alpine
+
+
+
+#BUILD Image
+
+vi ola.sh
+
+echo "Olá"
+
+vi Dockerfile
+
+
+# Dockerfile
+FROM alpine
+LABEL maintainer=<email>
+#ADD ou COPY
+COPY ./ola.sh /opt/app/ola.sh
+CMD chmod +x /opt/app/ola.sh
+CMD . /opt/app/ola.sh
+
+
+"Readme" 27L, 305C
+

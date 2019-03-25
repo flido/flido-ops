@@ -1,0 +1,6 @@
+FROM maven
+VOLUME /tmp
+ADD web-perf /tmp
+WORKDIR /tmp
+CMD  mvn package;mv target/*.jar app.jar; java -jar app.jar & 
+#ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","target/app.jar"]
